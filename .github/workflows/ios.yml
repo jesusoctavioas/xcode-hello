@@ -25,7 +25,7 @@ jobs:
         run: sudo xcode-select -switch /Applications/Xcode.app
 
       - name: Build
-        run: xcodebuild clean build -project xcode-hello.xcodeproj -scheme xcode-hello -destination 'platform=iOS Simulator,name=iPhone 17'
+        run: xcodebuild clean build -project xcode-hello.xcodeproj -scheme xcode-hello -allowProvisioningUpdates  -destination 'platform=iOS Simulator,name=iPhone 17'
 
       - name: Run tests
         run: xcodebuild test -project xcode-hello.xcodeproj -scheme xcode-hello -destination 'platform=iOS Simulator,name=iPhone 17'
